@@ -1,7 +1,7 @@
 * {
     margin: 0;
     height: 100vh;
-    background-color: black;
+    overflow: hidden;
 }
 
 h1 {
@@ -22,4 +22,21 @@ span {
     position: absolute;
     background-size: cover;
     background-image: url("heart.png");
+    pointer-events: none;
+    animation: heart-animate 6s linear
+}
+
+
+@keyframes heart-animate {
+    0%{
+        transform: translate(-50%,-50%);
+        opacity: 1;
+        filter: hue-rotate(0);
+    }
+    100%{
+        transform: translate(-50%,-5000%);
+        opacity: 0;
+        filter: hue-rotate(720deg);
+    }
+    
 }
