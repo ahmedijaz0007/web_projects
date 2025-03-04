@@ -1,10 +1,14 @@
-*{
+body{
     margin: 0%;
     background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#Main-text{
+#Main-text {
     color: #fff;
     font: 5em sans-serif;
-}
 
+}
