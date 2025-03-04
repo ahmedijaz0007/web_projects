@@ -4,6 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.5s;
 }
 
 #input {
@@ -11,7 +12,7 @@ body {
 }
 
 #label {
-    background-color: darkgray;
+    background-color: black;
     width: 80px;
     height: 40px;
     border-radius: 20px;
@@ -28,16 +29,17 @@ body {
     bottom: 3px;
     left: 3px;
     background-color: #fff;
-    animation: toggleOff 0.5s linear  forwards;
+    animation: toggleOff 0.5s linear forwards;
 
 }
 
 #input:checked+#label {
-    background-color: salmon;
+    background-color: white;
 }
 
 #input:checked+#label #circle {
     animation: toggleOn 0.5s linear forwards;
+    background-color: #000;
 }
 
 
