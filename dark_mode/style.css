@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#input {
+    visibility: hidden;
+}
+
+#label {
+    background-color: darkgray;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+#circle {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    background-color: #fff;
+    animation: toggleOff 0.5s linear  forwards;
+
+}
+
+#input:checked+#label {
+    background-color: salmon;
+}
+
+#input:checked+#label #circle {
+    animation: toggleOn 0.5s linear forwards;
+}
+
+
+@keyframes toggleOn {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(40px);
+        /* 80(Size of label) - 40(offset) - 34 (size of circle) = 6 (3 margin on both sides L&R)*/
+    }
+}
+
+@keyframes toggleOff {
+    0% {
+        transform: translateX(40px);
+    }
+
+    100% {
+        transform: translateX(0px);
+        /* 80(Size of label) - 40(offset) - 34 (size of circle) = 6 (3 margin on both sides L&R)*/
+    }
+}
