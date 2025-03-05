@@ -1,3 +1,4 @@
+
 body {
     margin: 0px;
     font-family: 'Courier New', Courier, monospace;
@@ -5,6 +6,12 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
+    background-size: cover; /* Ensures image covers the entire viewport */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repetition */
+    
+    overflow: hidden; /* Prevents scrolling */
+    transition: background-image 0.5s ease-in-out; /* Smooth transition */
     background-image: url("https://images.pexels.com/photos/1420440/pexels-photo-1420440.jpeg?auto=compress&cs=tinysrgb&w=1200");
 }
 
