@@ -17,9 +17,16 @@ body {
     min-width: 300px;
     padding: 70px 20px;
     color: #fff;
-
+    /* Initial hidden state */
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
+.testimonials-container.show {
+    opacity: 1;
+    transform: translateX(0);
+}
 
 .testimonials-container img {
     position: relative;

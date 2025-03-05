@@ -16,19 +16,50 @@ const testimonials = [
     }
 ]
 
+const testimonialsContainer = document.querySelector(".testimonials-container");
 const imageEl = document.querySelector(".image")
 const textEl = document.querySelector(".text")
 const nameEl = document.querySelector(".username")
 
-updateTestimonial();
+//updateTestimonial();
 let currIndex = 0;
 
-function updateTestimonial() {
-    setInterval(() => {
-        currIndex++;
-        currIndex = currIndex % testimonials.length;
+// function updateTestimonial() {
+//     setInterval(() => {
+//         currIndex++;
+//         currIndex = currIndex % testimonials.length;
+//         imageEl.src = testimonials[currIndex].photoUrl;
+//         textEl.innerText = testimonials[currIndex].text;
+//         nameEl.innerText = testimonials[currIndex].name;
+//     }, 3000)
+// }
+
+
+
+function changeTestimonial() {
+    // Remove 'show' class to fade out
+    testimonialsContainer.classList.remove("show");
+
+    // Wait for fade out transition (500ms) before changing content
+    setTimeout(() => {
+
+        // Move to the next testimonial (looping)
+        currIndex = (currIndex+1) % testimonials.length;
+
         imageEl.src = testimonials[currIndex].photoUrl;
         textEl.innerText = testimonials[currIndex].text;
         nameEl.innerText = testimonials[currIndex].name;
-    }, 3000)
+        
+        // Add 'show' class to fade in the new content
+        testimonialsContainer.classList.add("show");
+
+    }, 500); // Delay must match the transition time in CSS
 }
+
+// Start changing testimonials every 3 seconds
+setInterval(changeTestimonial, 3000);
+
+// Show the first testimonial on page load
+setTimeout(() => {
+    testimonialsContainer.classList.add("show");
+}, 100);
