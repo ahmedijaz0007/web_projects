@@ -1,0 +1,52 @@
+body {
+    margin: 0px;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://images.pexels.com/photos/1420440/pexels-photo-1420440.jpeg?auto=compress&cs=tinysrgb&w=1200");
+}
+
+
+.contaier {
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    width: 500px;
+    height: 300px;
+    padding: 20px 50px;
+    text-align: center;
+    color: #fff;
+}
+
+
+.clock-container {
+
+    justify-content: space-between;
+    display: flex;
+    align-items: end;
+
+}
+
+.clock-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    width: 100px;
+    height: 170px;
+    padding: 20px 10px;
+}
+
+.time {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.time-period {
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    width: 70px;
+    height: 50px;
+}
