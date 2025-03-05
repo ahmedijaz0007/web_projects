@@ -18,8 +18,8 @@ body {
     padding: 70px 20px;
     color: #fff;
 
-
 }
+
 
 .testimonials-container img {
     position: relative;
@@ -28,12 +28,13 @@ body {
     border-radius: 50%;
     left: 50%;
     transform: translateX(-50%);
-    top: -100px;
+    top: -120px;
 }
 
-.text{
+.text {
     text-align: center;
 }
+
 .username {
     font-size: 0.75em;
     font-weight: 100;
