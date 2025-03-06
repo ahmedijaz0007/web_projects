@@ -13,6 +13,4 @@ textArea.addEventListener('input', () => {
     totalChs = textArea.value.length;
     remainingEl.innerText = remainingChs;
     totalEl.innerText = totalChs;
-    
-
 })

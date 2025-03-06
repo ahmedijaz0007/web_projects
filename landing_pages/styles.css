@@ -1,0 +1,64 @@
+body{
+    margin: 0px;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+   
+}
+
+.split-container{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: flex 1s ease-in-out;
+    overflow: hidden;
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+   
+}
+
+
+.split-left{
+    flex: 1;
+    color: #000;
+    font: 3em sans-serif;
+    background-image: url("https://static1.pocketlintimages.com/wordpress/wp-content/uploads/2024/02/galaxy-s10.jpg");
+}
+.split-right{
+    flex: 1;
+    color: #fff;
+    font: 3em sans-serif;
+    background-color: black;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEAbpK-QuMrG6_Di7xbbjaFqhz6QExUFlpdA&s");    
+}
+
+
+.split-left:hover{
+    flex: 3;
+}
+
+.split-right:hover{
+    flex: 3;
+}
+
+.btn {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    transform: scale(1.05);
+}
